@@ -118,6 +118,9 @@ btnInsertar.addEventListener("click", () => {
 let obtenerMsj = window.location.search;
 let ObjetCodigo = new URLSearchParams(obtenerMsj);
 let codigo = ObjetCodigo.get('codigo');
-
-console.log(codigo);
-
+const listCodigo=[]
+for (let i = 0; i < 8; i++){
+    listCodigo.append(codigo[i]);
+}
+ActualizarGrafico(listCodigo);
+inputCode.value = codigo;
