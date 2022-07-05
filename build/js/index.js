@@ -90,10 +90,8 @@ btnInsertar.addEventListener("click", () => {
         for(let i = 0; i < 8; i++){
             caracter = parseInt(code[i]);
             if(isNaN(caracter)){
-                console.log("se encontro un caractar: ", code[i]);
                 verif=true;
             } else if(caracter > 5){
-                console.log("se encontro un num mayor a 5: ", code[i]);
                 verif=true;
             }
         }
@@ -117,4 +115,9 @@ btnInsertar.addEventListener("click", () => {
 
 });
 
+let obtenerMsj = window.location.search;
+let ObjetCodigo = new URLSearchParams(obtenerMsj);
+let codigo = ObjetCodigo.get('codigo');
+
+console.log(codigo);
 
